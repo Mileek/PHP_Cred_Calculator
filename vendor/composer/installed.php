@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'a0d5cbb4eb27f5f398503e156a9b8e239c49d672',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'a0d5cbb4eb27f5f398503e156a9b8e239c49d672',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'smarty/smarty' => array(
+            'pretty_version' => 'v5.0.2',
+            'version' => '5.0.2.0',
+            'reference' => 'bbd09c7bfaa6c2c091adc4568a944f765bb4f1d9',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../smarty/smarty',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/polyfill-mbstring' => array(
+            'pretty_version' => 'v1.29.0',
+            'version' => '1.29.0.0',
+            'reference' => '9773676c8a1bb1f8d4340a62efe641cf76eda7ec',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

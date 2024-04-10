@@ -2,28 +2,33 @@
 
 // KONTROLER strony kalkulatora
 require_once dirname(__FILE__) . '/../config.php';
+//załaduj Smarty
+require _ROOT_PATH . '/vendor/autoload.php';
+use Smarty\Smarty;
 
 // W kontrolerze niczego nie wysyła się do klienta.
 // Wysłaniem odpowiedzi zajmie się odpowiedni widok.
 // Parametry do widoku przekazujemy przez zmienne.
 //ochrona kontrolera - poniższy skrypt przerwie przetwarzanie w tym punkcie gdy użytkownik jest niezalogowany
-include _ROOT_PATH . '/app/security/check.php';
+// include _ROOT_PATH . '/app/security/check.php';
 
 // 1. pobranie parametrów
 function getParams(&$amount, &$years, &$interest)
 {
-    $amount = isset ($_REQUEST['amount']) ? $_REQUEST['amount'] : null;
-    $years = isset ($_REQUEST['years']) ? $_REQUEST['years'] : null;
-    $interest = isset ($_REQUEST['interest']) ? $_REQUEST['interest'] : null;
+    $amount = isset($_REQUEST['amount']) ? $_REQUEST['amount'] : null;
+    $years = isset($_REQUEST['years']) ? $_REQUEST['years'] : null;
+    $interest = isset($_REQUEST['interest']) ? $_REQUEST['interest'] : null;
 }
 
 // 2. walidacja parametrów z przygotowaniem zmiennych dla widoku
-function validate(&$amount, &$years, &$interest, &$messages)
+function validate(&$amount, &$years, &$interest, &$messages, &$hide_intro)
 {
     // sprawdzenie, czy parametry zostały przekazane
-    if (!(isset ($amount) && isset ($years) && isset ($interest))) {
+    if (!(isset($amount) && isset($years) && isset($interest))) {
         return false;
     }
+
+    $hide_intro = true;
 
     // sprawdzenie, czy potrzebne wartości zostały przekazane
     if ($amount == "") {
@@ -84,14 +89,33 @@ $interest = null;
 $result = null;
 $fullResult = null;
 $messages = array();
+$hide_intro = false;
 
 //pobierz parametry i wykonaj zadanie jeśli wszystko w porządku
 getParams($amount, $years, $interest);
-if (validate($amount, $years, $interest, $messages)) { // gdy brak błędów
+if (validate($amount, $years, $interest, $messages, $hide_intro)) { // gdy brak błędów
     process($amount, $years, $interest, $messages, $result, $fullResult);
 }
 
-// Wywołanie widoku z przekazaniem zmiennych
-// - zainicjowane zmienne ($messages,$amount,$years,$interest,$result,$fullResult)
-//   będą dostępne w dołączonym skrypcie
-include 'cred_calc_view.php';
+// 4. Przygotowanie danych dla szablonu
+
+$smarty = new Smarty();
+
+$smarty->assign('app_url', _APP_URL);
+$smarty->assign('root_path', _ROOT_PATH);
+$smarty->assign('page_title', 'Przykład php 04');
+$smarty->assign('page_description', 'Szablonowanie oparte na bibliotece Smarty');
+$smarty->assign('page_header', 'Szablony Smarty');
+
+$smarty->assign('hide_intro', $hide_intro);
+
+//pozostałe zmienne niekoniecznie muszą istnieć, dlatego sprawdzamy aby nie otrzymać ostrzeżenia
+$smarty->assign('amount', $amount);
+$smarty->assign('years', $years);
+$smarty->assign('interest', $interest);
+$smarty->assign('result', $result);
+$smarty->assign('fullResult', $fullResult);
+$smarty->assign('messages', $messages);
+
+// 5. Wywołanie szablonu
+$smarty->display(dirname(__FILE__) . '/cred_calc.tpl');

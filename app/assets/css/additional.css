@@ -1,0 +1,19 @@
+.errors {
+    margin: 20px;
+    padding: 10px 10px 10px 30px;
+    border-radius: 15px;
+    background-color: #f88;
+    width: 300px;
+}
+.infos {
+    margin: 20px;
+    padding: 10px 10px 10px 30px;
+    border-radius: 15px;
+    background-color: rgb(136, 255, 209);
+    width: 300px;
+}
+
+.footerExtend {
+    margin-top: 2em;
+    margin-left: 8em;
+}
