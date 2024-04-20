@@ -1,6 +1,9 @@
 <?php
-define('_SERVER_NAME', 'localhost');//Domyślny port 80, którego nie trzeba zapisywać
-define('_SERVER_URL', 'http://' . _SERVER_NAME);
-define('_APP_ROOT', '/php_04_szablony_smarty/PHP_Studies');
-define('_APP_URL', _SERVER_URL . _APP_ROOT);
-define("_ROOT_PATH", dirname(__FILE__));
+require_once 'Config.class.php';
+
+$conf = new Config();
+$conf->root_path = dirname(__FILE__);
+$conf->server_name = 'localhost';
+$conf->server_url = 'http://' . $conf->server_name;
+$conf->app_root = '/php_05_obiektowosc/PHP_Studies';
+$conf->app_url = $conf->server_url . $conf->app_root;
