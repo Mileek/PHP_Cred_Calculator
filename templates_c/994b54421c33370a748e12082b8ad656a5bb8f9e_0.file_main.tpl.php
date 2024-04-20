@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.0.2, created on 2024-04-20 16:33:15
-  from 'file:C:\xampp\htdocs\php_05_obiektowosc\PHP_Studies\app\calc\../../templates/main.tpl' */
+/* Smarty version 5.0.2, created on 2024-04-20 20:28:23
+  from 'file:C:\xampp\htdocs\php_06_nowa_struktura\PHP_Studies\app\views\../views/templates//main.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.0.2',
-  'unifunc' => 'content_6623d22b617555_37255287',
+  'unifunc' => 'content_6624094722d8d2_74296260',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '54406a3a736bdf8fcd71fb52cc6baae039fd968d' => 
+    '994b54421c33370a748e12082b8ad656a5bb8f9e' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\php_05_obiektowosc\\PHP_Studies\\app\\calc\\../../templates/main.tpl',
-      1 => 1713623580,
+      0 => 'C:\\xampp\\htdocs\\php_06_nowa_struktura\\PHP_Studies\\app\\views\\../views/templates//main.tpl',
+      1 => 1713629734,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6623d22b617555_37255287 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'C:\\xampp\\htdocs\\php_05_obiektowosc\\PHP_Studies\\templates';
+function content_6624094722d8d2_74296260 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\xampp\\htdocs\\php_06_nowa_struktura\\PHP_Studies\\app\\views\\templates';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
 ?>
 <!DOCTYPE HTML>
@@ -33,13 +33,13 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
-/app/calc/assets/css/main.css" />
+/assets/css/main.css" />
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
-/app/calc/assets/css/additional.css" />
+/assets/css/additional.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
     <noscript>
         <link rel="stylesheet" href="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
-/app/calc/assets/css/noscript.css" />
+/assets/css/noscript.css" />
     </noscript>
 </head>
 
@@ -84,7 +84,7 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
             <div class="inner">
 
                 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_9285115416623d22b612296_69700129', 'content');
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_19611274516624094722c248_91772800', 'content');
 ?>
 
 
@@ -111,40 +111,40 @@ $_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_9285115416623
     <!-- Scripts -->
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
-/app/calc/assets/js/jquery.min.js"><?php echo '</script'; ?>
+/assets/js/jquery.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
-/app/calc/assets/js/jquery.scrolly.min.js"><?php echo '</script'; ?>
+/assets/js/jquery.scrollex.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
-/app/calc/assets/js/jquery.scrollex.min.js"><?php echo '</script'; ?>
+/assets/js/jquery.scrolly.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
-/app/calc/assets/js/browser.min.js"><?php echo '</script'; ?>
+/assets/js/browser.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
-/app/calc/assets/js/breakpoints.min.js"><?php echo '</script'; ?>
+/assets/js/breakpoints.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
-/app/calc/assets/js/util.js"><?php echo '</script'; ?>
+/assets/js/util.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
-/app/calc/assets/js/main.js"><?php echo '</script'; ?>
+/assets/js/main.js"><?php echo '</script'; ?>
 >
 </body>
 
 </html><?php }
 /* {block 'content'} */
-class Block_9285115416623d22b612296_69700129 extends \Smarty\Runtime\Block
+class Block_19611274516624094722c248_91772800 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'C:\\xampp\\htdocs\\php_05_obiektowosc\\PHP_Studies\\templates';
+$_smarty_current_dir = 'C:\\xampp\\htdocs\\php_06_nowa_struktura\\PHP_Studies\\app\\views\\templates';
 ?>
  Domyślna treść zawartości, nie ma nic <?php
 }

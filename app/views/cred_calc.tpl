@@ -1,4 +1,4 @@
-{extends file="../../templates/main.tpl"}
+{extends file="main.tpl"}
 
 {block name=footer}przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora{/block}
 
@@ -32,11 +32,11 @@
             {* wyświeltenie listy błędów, jeśli istnieją *}
             <span class="icon solid alt fa-envelope"></span>
             <h3>Lista błędów:</h3>
-            {if $messages->isError()}
+            {if $msgs->isError()}
                 <div class="contact-method">
 
                     <ol class="errors">
-                        {foreach $messages->getErrors() as $msg}
+                        {foreach $msgs->getErrors() as $msg}
                             {strip}
                                 <li>{$msg}</li>
                             {/strip}
@@ -59,10 +59,10 @@
             {* wyświeltenie listy informacji, jeśli istnieją *}
             <span class="icon solid alt fa-envelope"></span>
             <h3>Informacje: </h3>
-            {if $messages->isInfo()}
+            {if $msgs->isInfo()}
                 <div class="contact-method">
                     <ol class="infos">
-                        {foreach  $messages->getInfos() as $msg}
+                        {foreach  $msgs->getInfos() as $msg}
                             {strip}
                                 <li>{$msg}</li>
                             {/strip}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.0.2, created on 2024-04-20 15:50:45
-  from 'file:C:\xampp\htdocs\php_05_obiektowosc\PHP_Studies\app\../templates/main.tpl' */
+/* Smarty version 5.0.2, created on 2024-04-20 20:29:17
+  from 'file:main.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.0.2',
-  'unifunc' => 'content_6623c835ce3be6_62631280',
+  'unifunc' => 'content_6624097d6e12a2_60131765',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '2f312f16732b7b2dca949200a1332d96f8b7de84' => 
+    '109473ff340002d7d792762e54bdfd8291afa21c' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\php_05_obiektowosc\\PHP_Studies\\app\\../templates/main.tpl',
-      1 => 1712774516,
+      0 => 'main.tpl',
+      1 => 1713629734,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6623c835ce3be6_62631280 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'C:\\xampp\\htdocs\\php_05_obiektowosc\\PHP_Studies\\templates';
+function content_6624097d6e12a2_60131765 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\xampp\\htdocs\\php_06_nowa_struktura\\PHP_Studies\\app\\views\\templates';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
 ?>
 <!DOCTYPE HTML>
@@ -32,14 +32,14 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
 </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->getValue('app_url');?>
-/app/assets/css/main.css" />
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->getValue('app_url');?>
-/app/assets/css/additional.css" />
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
+/assets/css/main.css" />
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
+/assets/css/additional.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
     <noscript>
-        <link rel="stylesheet" href="<?php echo $_smarty_tpl->getValue('app_url');?>
-/app/assets/css/noscript.css" />
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
+/assets/css/noscript.css" />
     </noscript>
 </head>
 
@@ -49,7 +49,7 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
 
         <!-- Header -->
         <header id="header" class="alt">
-            <a href="cred_calc.php" class="logo"><strong>Cred Calc</strong> <span>by Kamil Kaszuba</span></a>
+            <a href="" class="logo"><strong>Cred Calc</strong> <span>by Kamil Kaszuba</span></a>
             <nav>
                 <a href="#menu">Menu</a>
             </nav>
@@ -84,7 +84,7 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
             <div class="inner">
 
                 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_18467011066623c835ce2679_89426568', 'content');
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_18225856266624097d6de0e4_07701318', 'content');
 ?>
 
 
@@ -110,41 +110,41 @@ $_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_1846701106662
     </div>
     <!-- Scripts -->
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('app_url');?>
-/app/assets/js/jquery.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
+/assets/js/jquery.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('app_url');?>
-/app/assets/js/jquery.scrolly.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
+/assets/js/jquery.scrollex.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('app_url');?>
-/app/assets/js/jquery.scrollex.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
+/assets/js/jquery.scrolly.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('app_url');?>
-/app/assets/js/browser.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
+/assets/js/browser.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('app_url');?>
-/app/assets/js/breakpoints.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
+/assets/js/breakpoints.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('app_url');?>
-/app/assets/js/util.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
+/assets/js/util.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('app_url');?>
-/app/assets/js/main.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->getValue('conf')->app_url;?>
+/assets/js/main.js"><?php echo '</script'; ?>
 >
 </body>
 
 </html><?php }
 /* {block 'content'} */
-class Block_18467011066623c835ce2679_89426568 extends \Smarty\Runtime\Block
+class Block_18225856266624097d6de0e4_07701318 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'C:\\xampp\\htdocs\\php_05_obiektowosc\\PHP_Studies\\templates';
+$_smarty_current_dir = 'C:\\xampp\\htdocs\\php_06_nowa_struktura\\PHP_Studies\\app\\views\\templates';
 ?>
  Domyślna treść zawartości, nie ma nic <?php
 }
