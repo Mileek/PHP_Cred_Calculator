@@ -1,4 +1,4 @@
-{extends file="../templates/main.tpl"}
+{extends file="../../templates/main.tpl"}
 
 {block name=footer}przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora{/block}
 
@@ -6,7 +6,7 @@
     <section>
         <div class="l-box-lrg pure-u-1 pure-u-med-2-5">
 
-            <form action="{$app_url}/app/cred_calc.php" method="post">
+            <form action="{$conf->action_root}calcCompute" method="post">
                 <div class="fields">
                     <div class="field">
                         <label for="id_amount">Kwota kredytu: </label>

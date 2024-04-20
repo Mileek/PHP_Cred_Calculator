@@ -5,4 +5,4 @@ require_once dirname(__FILE__) . '/config.php'; //zwróć ścieżkę pliku(wola�
 //header("Location: "._APP_URL."/app/calc.php");
 
 
-include $conf->root_path . '/app/cred_calc.php'; //załaduj plik cred_calc.php
+include $conf->root_path . '/app/ctrl.php'; //załaduj plik ctrl.php

@@ -5,8 +5,8 @@ require $conf->root_path . '/vendor/autoload.php';
 use Smarty\Smarty;
 
 require_once $conf->root_path . '/lib/Messages.class.php';
-require_once $conf->root_path . '/app/CredCalcForm.class.php';
-require_once $conf->root_path . '/app/CredCalcResult.class.php';
+require_once $conf->root_path . '/app/calc/CredCalcForm.class.php';
+require_once $conf->root_path . '/app/calc/CredCalcResult.class.php';
 
 
 class CredCalcCtrl
@@ -106,6 +106,8 @@ class CredCalcCtrl
         $smarty = new Smarty();
 
         global $conf;
+        $smarty->assign('conf', $conf);
+
         $smarty->assign('app_url', $conf->app_url);
         $smarty->assign('root_path', $conf->root_path);
         $smarty->assign('page_title', 'Przykład php 04');
@@ -118,6 +120,6 @@ class CredCalcCtrl
         $smarty->assign('messages', $this->msgs);
 
         // 5. Wywołanie szablonu
-        $smarty->display(dirname(__FILE__) . '/cred_calc.tpl');
+        $smarty->display($conf->root_path . '/app/calc/cred_calc.tpl');
     }
 }
