@@ -2,7 +2,6 @@
 require_once 'CredCalcForm.class.php';
 require_once 'CredCalcResult.class.php';
 
-
 class CredCalcCtrl
 {
     //definicja zmiennych kontrolera

@@ -5,7 +5,6 @@
 {block name=content}
     <section>
         <div class="l-box-lrg pure-u-1 pure-u-med-2-5">
-
             <form action="{$conf->action_root}calcCompute" method="post">
                 <div class="fields">
                     <div class="field">
@@ -34,7 +33,6 @@
             <h3>Lista błędów:</h3>
             {if $msgs->isError()}
                 <div class="contact-method">
-
                     <ol class="errors">
                         {foreach $msgs->getErrors() as $msg}
                             {strip}
@@ -45,6 +43,7 @@
                 </div>
             {/if}
         </section>
+
         <section>
             <span class="icon solid alt fa-poll-h"></span>
             <h3>Wynik:</h3>
@@ -55,6 +54,7 @@
                 </div>
             {/if}
         </section>
+
         <section>
             {* wyświeltenie listy informacji, jeśli istnieją *}
             <span class="icon solid alt fa-envelope"></span>
@@ -71,7 +71,6 @@
                 </div>
             {/if}
         </section>
-
         </div>
     </section>
 {/block}
