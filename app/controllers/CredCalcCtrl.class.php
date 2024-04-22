@@ -1,6 +1,10 @@
 <?php
-require_once 'CredCalcForm.class.php';
-require_once 'CredCalcResult.class.php';
+//namespace obecnej klassy
+namespace app\controllers;
+
+//Importy klas
+use app\forms\CredCalcForm;
+use app\transfer\CredCalcResult;
 
 class CredCalcCtrl
 {

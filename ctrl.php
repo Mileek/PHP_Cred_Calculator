@@ -8,21 +8,14 @@ require_once 'init.php';
 // Ponadto ładuje skrypt funkcji pomocniczych (functions.php) oraz wczytuje parametr 'action' do zmiennej $action.
 // Wystarczy już tylko podjąć decyzję co zrobić na podstawie $action.
 
-// Dodatkowo zmieniono organizację kontrolerów i widoków. Teraz wszystkie są w odpowiednio nazwanych folderach w app
-
 switch ($action) {
     default: // 'CredCalcCtrl'
-        // załaduj definicję kontrolera
-        include_once $conf->root_path . '/app/controllers/CredCalcCtrl.class.php';
-        // utwórz obiekt i uzyj
-        $ctrl = new CredCalcCtrl();
+        $ctrl = new app\controllers\CredCalcCtrl();
         $ctrl->generateView();
         break;
     case 'calcCompute':
         // załaduj definicję kontrolera
-        include_once $conf->root_path . '/app/controllers/CredCalcCtrl.class.php';
-        // utwórz obiekt i uzyj
-        $ctrl = new CredCalcCtrl();
+        $ctrl = new app\controllers\CredCalcCtrl();
         $ctrl->process();
         break;
     case 'action1':

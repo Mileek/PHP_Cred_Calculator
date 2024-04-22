@@ -1,4 +1,6 @@
 <?php
+namespace app\forms;
+
 //Model
 class CredCalcForm
 {

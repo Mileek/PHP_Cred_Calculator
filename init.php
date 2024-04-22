@@ -1,7 +1,7 @@
 <?php
-require_once dirname(__FILE__) . '/core/Config.class.php';
-$conf = new Config();
-include dirname(__FILE__) . '/config.php'; //ustaw konfigurację
+require_once 'core/Config.class.php';
+$conf = new core\Config();
+include 'config.php'; //ustaw konfigurację
 
 function &getConf()
 {
@@ -10,8 +10,8 @@ function &getConf()
 }
 
 //załaduj definicję klasy Messages i stwórz obiekt
-require_once getConf()->root_path . '/core/Messages.class.php';
-$msgs = new Messages();
+require_once 'core/Messages.class.php';
+$msgs = new core\Messages();
 
 function &getMessages()
 {
@@ -26,7 +26,7 @@ function &getSmarty()
     global $smarty;
     if (!isset($smarty)) {
         //stwórz Smarty i przypisz konfigurację i messages
-        require getConf()->root_path . '/vendor/autoload.php';
+        require 'vendor/autoload.php';
         $smarty = new \Smarty\Smarty();
         //przypisz konfigurację i messages
         $smarty->assign('conf', getConf());
@@ -34,14 +34,22 @@ function &getSmarty()
         //zdefiniuj lokalizację widoków (aby nie podawać ścieżek przy ich załączaniu)
         $smarty->setTemplateDir(
             array(
-                'one' => getConf()->root_path . '/app/views',
-                'two' => getConf()->root_path . '/app/views/templates'
+                'one' => 'app/views',
+                'two' => 'app/views/templates'
             )
         );
     }
     return $smarty;
 }
 
-require_once getConf()->root_path . '/core/functions.php';
+require_once 'core/ClassLoader.class.php'; //załaduj i stwórz loader klas
+$cloader = new core\ClassLoader();
+function &getLoader()
+{
+    global $cloader;
+    return $cloader;
+}
+
+require_once 'core/functions.php';
 
 $action = getFromRequest('action');
