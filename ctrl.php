@@ -10,16 +10,23 @@ require_once 'init.php';
 
 switch ($action) {
     default: // 'CredCalcCtrl'
+        include 'check.php';
         $ctrl = new app\controllers\CredCalcCtrl();
         $ctrl->generateView();
         break;
+    case 'login': // 'LoginCtrl'
+        $ctrl = new app\controllers\LoginCtrl();
+        $ctrl->doLogin();
     case 'calcCompute':
+        include 'check.php';
         // załaduj definicję kontrolera
         $ctrl = new app\controllers\CredCalcCtrl();
         $ctrl->process();
         break;
-    case 'action1':
-        // zrób coś innego ...
+    case 'logout':
+        include 'check.php';
+        $ctrl = new app\controllers\LoginCtrl();
+        $ctrl->doLogout();
         break;
     case 'action2':
         // zrób coś innego ...

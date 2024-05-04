@@ -3,6 +3,7 @@
 {block name=footer}przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora{/block}
 
 {block name=content}
+
     <section>
         <div class="l-box-lrg pure-u-1 pure-u-med-2-5">
             <form action="{$conf->action_root}calcCompute" method="post">
