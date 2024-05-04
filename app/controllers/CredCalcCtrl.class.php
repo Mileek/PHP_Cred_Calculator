@@ -73,6 +73,7 @@ class CredCalcCtrl
         //pobierz parametry i wykonaj zadanie jeśli wszystko w porządku
         $this->getParams();
 
+        //inRole('admin'); //sprawdzenie czy jest adminem, ale nie wiem do czego bym mógł to użyć :D
         if ($this->validate()) {
 
             $this->form->amount = intval($this->form->amount);
@@ -86,6 +87,13 @@ class CredCalcCtrl
             $this->result->result = $this->form->amount * ($monthly_interest / (1 - pow((1 + $monthly_interest), -$number_of_payments))); // Wzór na równowartość raty kredytu
             $this->result->fullResult = $this->result->result * $number_of_payments; // Cała kwota do zapłaty
         }
+        $this->generateView();
+    }
+
+
+    public function action_calcShow()
+    {
+        getMessages()->addInfo('Witaj w kalkulatorze kredytowym');
         $this->generateView();
     }
 
