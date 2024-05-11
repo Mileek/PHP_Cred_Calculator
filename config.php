@@ -1,7 +1,7 @@
 <?php
 $conf->server_name = 'localhost';
 $conf->server_url = 'http://' . $conf->server_name;
-$conf->app_root = '/php_07_Routing/PHP_Studies';
+$conf->app_root = '/php_08_baza_danych/PHP_Studies';
 $conf->action_root = $conf->app_root . '/ctrl.php?action=';
 
 $conf->app_url = $conf->server_url . $conf->app_root;

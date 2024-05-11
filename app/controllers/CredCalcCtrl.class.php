@@ -66,7 +66,7 @@ class CredCalcCtrl
     }
 
     // 3. wykonaj zadanie jeśli wszystko w porządku
-    function process()
+    function action_calcCompute()
     {
         //global $role;
         // if ($role == 'admin'){}
@@ -87,6 +87,37 @@ class CredCalcCtrl
             $this->result->result = $this->form->amount * ($monthly_interest / (1 - pow((1 + $monthly_interest), -$number_of_payments))); // Wzór na równowartość raty kredytu
             $this->result->fullResult = $this->result->result * $number_of_payments; // Cała kwota do zapłaty
         }
+
+        try {
+            $database = new \Medoo\Medoo(
+                [
+                    'type' => 'mysql',
+                    'host' => 'localhost',
+                    'database' => 'kalk',
+                    'username' => 'root',
+                    'password' => '',
+
+                    'charset' => 'utf8',
+                    'collation' => 'utf8_polish_ci',
+                    'port' => 3306,
+                    'option' => [
+                        \PDO::ATTR_CASE => \PDO::CASE_NATURAL,
+                        \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
+                    ],
+                ]
+            );
+
+            $database->insert("wynik", [
+                "kwota" => $this->form->amount,
+                "lat" => $this->form->years,
+                "procent" => $this->form->interest,
+                "rata" => $this->result->result ?? 0,
+                "data" => date("Y-m-d H:i:s")
+            ]);
+        } catch (\PDOException $ex) {
+            getMessages()->addError("DB Error: " . $ex->getMessage());
+        }
+
         $this->generateView();
     }
 

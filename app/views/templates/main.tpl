@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="{$conf->app_url}/assets/css/noscript.css" />
     </noscript>
 </head>
-{* /php_04_szablony_smarty/PHP_Studies *}
 
 <body class="is-preload">
     <!-- Wrapper -->
@@ -20,7 +19,8 @@
 
         <!-- Header -->
         <header id="header" class="alt">
-            <a href="" class="logo"><strong>Cred Calc</strong> <span>by Kamil Kaszuba</span></a>
+            <a href="{$conf->action_url}action_calcShow" class="logo"><strong>Cred Calc</strong> <span>by Kamil
+                    Kaszuba</span></a>
             <nav>
                 <a href="#menu">Menu</a>
             </nav>
@@ -29,8 +29,8 @@
         <!-- Menu -->
         <nav id="menu">
             <ul class="links">
-                <li><a>Placeholder 0</a></li>
-                <li><a>Placeholder 1</a></li>
+                <li><a href="{$conf->action_url}action_calcShow">Kalkulator</a></li>
+                <li><a href="{$conf->action_url}historyShow">Historia</a></li>
                 <li><a>Placeholder 2</a></li>
                 <li><a>Placeholder 3</a></li>
             </ul>
@@ -54,7 +54,8 @@
         <section id="contact">
             <div class="inner">
 
-                {block name=content} Domyślna treść zawartości, nie ma nic {/block}
+                {block name=content} {/block}
+                {block name=contentHistory} {/block}
 
             </div>
         </section>
